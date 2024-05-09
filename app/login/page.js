@@ -5,10 +5,10 @@ import { useSession, signIn, signOut } from "next-auth/react"
 import { useRouter } from 'next/navigation'
 
 
-const login = () => {
+const Login = () => {
 
   const { data: session } = useSession();
-  const router = useRouter();
+  const router = useRouter();s
 
   if(session){
     const username = session.user.name;
