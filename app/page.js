@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 export default function Home() {
   return (
     <>
@@ -18,17 +16,17 @@ export default function Home() {
         <h1 className="text-3xl font-bold text-center mb-14">Your fans can buy you a Chai</h1>
         <div className="flex gap-5 justify-around">
           <div className="item space-y-3 flex flex-col justify-center items-center">
-            <img className="bg-slate-400 rounded-full p-2 text-black h-[88px] w-[88px]" src="/man.gif" alt="" />
+            <img className="bg-slate-400 rounded-full p-2 text-black h-[88px] w-[88px]" src="/Get-me-a-Chai/public/man.gif" alt="" />
             <p className="font-bold">Fans want to help</p>
             <p>Your fans are available for you to help you.</p>
           </div>
           <div className="item space-y-3 flex flex-col justify-center items-center">
-            <img className="bg-slate-400 rounded-full text-black h-[88px] w-[88px]" src="/coin.gif" alt="" />
+            <img className="bg-slate-400 rounded-full text-black h-[88px] w-[88px]" src="/Get-me-a-Chai/public/coin.gif" alt="" />
             <p className="font-bold">Fans want to help</p>
             <p>Your fans are available for you to help you.</p>
           </div>
           <div className="item space-y-3 flex flex-col justify-center items-center">
-            <img className="bg-slate-400 rounded-full p-2 text-black h-[88px] w-[88px]" src="/group.gif" alt="" />
+            <img className="bg-slate-400 rounded-full p-2 text-black h-[88px] w-[88px]" src="/Get-me-a-Chai/public/group.gif" alt="" />
             <p className="font-bold">Fans want to help</p>
             <p>Your fans are available for you to help you.</p>
           </div>
