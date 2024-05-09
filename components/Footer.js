@@ -6,6 +6,6 @@ const Footer = () => {
         <p>Copyright &copy; Get me A Chai - All rights reserved!</p>
     </footer>
   )
-}
+} 
 
 export default Footer
