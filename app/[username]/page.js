@@ -3,6 +3,8 @@ import React from 'react'
 import { useSession, signIn, signOut } from "next-auth/react"
 import { useRouter } from 'next/navigation'
 import { useState } from 'react'
+import Image from "next/image";
+
 
 const MyAccount = ({ params }) => {
 

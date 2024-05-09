@@ -1,6 +1,6 @@
 "use client"
 import React from 'react'
-import Login from '@/components/Login'
+import LoginComp from '@/components/LoginComp'
 import { useSession, signIn, signOut } from "next-auth/react"
 import { useRouter } from 'next/navigation'
 
@@ -8,7 +8,7 @@ import { useRouter } from 'next/navigation'
 const Login = () => {
 
   const { data: session } = useSession();
-  const router = useRouter();s
+  const router = useRouter();
 
   if(session){
     const username = session.user.name;
@@ -19,7 +19,7 @@ const Login = () => {
   return (
     <div className='flex justify-center items-center'>
       <div className='w-fit h-[85.3vh] flex justify-center items-center'>
-        <Login />
+        <LoginComp />
       </div>
       <div className='size-fit'>
         <div className="socialLoginBtns flex justify-center items-center">
