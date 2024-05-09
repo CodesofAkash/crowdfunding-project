@@ -18,9 +18,9 @@ const Navbar = () => {
         </div>
       </Link>
       <ul className='flex justify-between items-center gap-10'>
-        <li className="cursor-pointer"><Link href={"/contributions"}>Contributions</Link></li>
-        <li className="cursor-pointer"><Link href={"/about"}>About</Link></li>
-        <li className="cursor-pointer"><Link href={"/projects"}>Projects</Link></li>
+        <li className="cursor-pointer"><Link href={"/Get-me-a-Chai/contributions"}>Contributions</Link></li>
+        <li className="cursor-pointer"><Link href={"/Get-me-a-Chai/about"}>About</Link></li>
+        <li className="cursor-pointer"><Link href={"/Get-me-a-Chai/projects"}>Projects</Link></li>
         <li className='flex gap-2 relative'>
 
           { session && <> <button onBlur={()=>{setTimeout(()=>{setshowDropdown(true)}, 100)}} onClick={()=>{setshowDropdown(!showDropdown)}} id="dropdownHoverButton" data-dropdown-toggle="dropdownHover" data-dropdown-trigger="hover" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">Welcome {session.user.name}<svg class="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
@@ -47,11 +47,11 @@ const Navbar = () => {
           </>
       }
 
-          <Link href="/login"><button type="button" className={session ? "hidden" : "text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-3 py-1.5 text-center"}>Login</button></Link>
+          <Link href="/Get-me-a-Chai/login"><button type="button" className={session ? "hidden" : "text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-3 py-1.5 text-center"}>Login</button></Link>
           <button onClick={() => { signOut() }} type="button" className={session ? "text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-3 py-1.5 text-center" : "hidden"}>LogOut</button>
           <span className={session ? "text-2xl hidden" : "text-2xl block"}>/</span>
-          <Link href="/signup"><button type="button" className={session ? "hidden" : "text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-3 py-1.5 text-center"}>Sign Up</button></Link>
-          {session && <Link href={session.user.name}><img src={session.user.image} alt="error" className="w-10 rounded-full" /></Link>}
+          <Link href="/Get-me-a-Chai/signup"><button type="button" className={session ? "hidden" : "text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-3 py-1.5 text-center"}>Sign Up</button></Link>
+          {session && <Link href={`/Get-me-a-Chai/${session.user.name}`}><img src={session.user.image} alt="User" className="w-10 rounded-full" /></Link>}
         </li>
       </ul>
     </nav>
