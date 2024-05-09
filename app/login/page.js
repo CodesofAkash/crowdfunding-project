@@ -12,7 +12,7 @@ const login = () => {
   if(session){
     const router = useRouter();
     const username = session.user.name;
-    const path = `/Get-me-a-Chai/${username}`;
+    const path = `/Get-me-a-Chai/app/${username}`;
     router.push(path);
   }
 
