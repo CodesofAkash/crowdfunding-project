@@ -15,7 +15,7 @@ const MyAccount = ({ params }) => {
 
     if (!session) {
         const router = useRouter();
-        router.push("/Get-me-a-Chai/login");
+        router.push("/Get-me-a-Chai/app/login");
     }
 
     return (
