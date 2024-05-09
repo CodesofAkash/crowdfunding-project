@@ -8,13 +8,13 @@ import { useRouter } from 'next/navigation'
 const SignUp = () => {
 
     const { data: session } = useSession();
+    const router = useRouter();
 
     if(session){
-      const router = useRouter();
       const username = session.user.name;
       const path = `/${username}`;
       router.push(path);
-    }
+    } 
 
     return (
         <div className='text-white py-6 container mx-auto'>

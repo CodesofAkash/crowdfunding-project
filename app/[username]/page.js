@@ -8,13 +8,13 @@ const MyAccount = ({ params }) => {
 
     const { data: session } = useSession();
     const [show, setshow] = useState(false)
+    const router = useRouter();
 
     const handleShow = () => {
         setshow(!show);
     }
 
     if (!session) {
-        const router = useRouter();
         router.push("/login");
     }
 
