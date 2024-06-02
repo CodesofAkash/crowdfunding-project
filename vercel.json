@@ -1,0 +1,8 @@
+{
+  "functions": {
+    "myFunction": {
+      "memory": "1GiB",
+      "timeout": 30 // Set timeout to 30 seconds
+    }
+  }
+}
