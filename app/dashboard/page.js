@@ -12,7 +12,8 @@ const Dashboard = () => {
 
     useEffect(() => {
         if (session) fetchData();
-    }, [session]);
+    }, [session, fetchData]);
+    
 
     const fetchData = async () => {
         try {

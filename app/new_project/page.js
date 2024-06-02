@@ -26,7 +26,7 @@ const Project = () => {
         <div className='w-1/2 rounded-lg bg-gray-800'>
             <form onSubmit={handleSubmit(onSubmit)} className="w-full p-10 gap-5 flex justify-start items-center flex-col">
                 <div className="mb-5 w-full">
-                    <label htmlFor="projectName" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Project's Name</label>
+                <label htmlFor="projectName" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Project&apos;s Name</label>
                     <input 
                         {...register("projectName", { required: true })} 
                         value={info.name} 
@@ -52,7 +52,7 @@ const Project = () => {
                     />
                 </div>
                 <div className="mb-5 w-full">
-                    <label htmlFor="description" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Project's Description</label>
+                <label htmlFor="description" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Project&apos;s Description</label>
                     <input 
                         {...register("description", { required: true })} 
                         value={info.username} 
