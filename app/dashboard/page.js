@@ -11,19 +11,24 @@ const Dashboard = () => {
     const [info, setinfo] = useState({ name: "", email: "", username: "", profilePic: "", coverPic: "", razorpayId: "", razorpaySecret: "" });
 
     useEffect(() => {
-        if (session) fetchData();
-    }, [session, fetchData]);
+        const fetchData = async () => {
+            try {
+                const user = await fetchuser(session.user.name);
+                setinfo(user);
+                console.log(info);
+            } catch (error) {
+                console.error('Error fetching user data:', error);
+            }
+        };
+    
+        if (session) {
+            fetchData();
+        }
+    }, [session]);
+    
     
 
-    const fetchData = async () => {
-        try {
-            const user = await fetchuser(session.user.name);
-            setinfo(user);
-            console.log(info);
-        } catch (error) {
-            console.error('Error fetching user data:', error);
-        }
-    };
+
 
     const onSubmit = async (data) => {
         let m = await updateUser(session && session.user.email, data);

@@ -1,6 +1,7 @@
 "use client"
 import Head from 'next/head';
 import Link from 'next/link';
+import Image from 'next/image';
 import { fetchProjects } from '@/actions/useractions';
 import { useState, useEffect } from 'react';
 
@@ -10,15 +11,14 @@ const Contribute = () => {
   console.log(users)
 
   useEffect(() => {
+    const fetchData = async () => {
+      let u = await fetchProjects();
+      setusers(u);
+      console.log(users)
+    }
     fetchData();
-  }, [fetchData]);
-
-
-  const fetchData = async () => {
-    let u = await fetchProjects();
-    setusers(u);
-    console.log(users)
-  }
+  }, []);
+  
 
 
   return (

@@ -91,10 +91,9 @@ const PaymentPage = ({ userData }) => {
     }
 
     useEffect(() => {
-        if (paymentform.amount !== undefined && paymentform.amount !== null) {
-            pay();
-        }
-    }, [paymentform.amount]);
+        pay();
+    }, [pay]);
+    
     
 
     return (
