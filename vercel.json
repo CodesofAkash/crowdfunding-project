@@ -1,7 +1,6 @@
 {
   "functions": {
     "myFunction": {
-      "memory": "1GiB",
       "timeout": 30
     }
   }
